@@ -41,4 +41,10 @@ class ImageTestCases(TestCase):
         """
         self.assertTrue(self.new_image.name == "image")
 
+    def test_save_image(self):
+        """
+        This will test whether the new image is added to the db
+        """
+        self.new_image.save_image()
+        self.assertTrue(len(Image.objects.all()) > 0)
 
