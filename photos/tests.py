@@ -35,3 +35,10 @@ class ImageTestCases(TestCase):
         """
         self.assertTrue(isinstance(self.new_image, Image))
 
+    def test_init(self):
+        """
+        This will test whether the new image is instantiated correctly
+        """
+        self.assertTrue(self.new_image.name == "image")
+
+
