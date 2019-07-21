@@ -78,5 +78,17 @@ class Image(models.Model):
         """
         Image.objects.get(id = self.id).delete()
 
+    def update_image(self,val):
+        """
+        This is the method to update the instance
+        """
+        Image.objects.filter(id = self.id).update(name = val)
+    
+     @classmethod
+    def get_image_by_id(cls,image_id):
+        """
+        This is the method to get a specific image
+        """
+        return cls.objects.get(id = image_id)
 
 
