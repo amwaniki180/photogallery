@@ -91,4 +91,11 @@ class Image(models.Model):
         """
         return cls.objects.get(id = image_id)
 
+    @classmethod
+    def get_all_images(cls):
+        all_images = Image.objects.all()
+        return all_images
+
+    
+
 
