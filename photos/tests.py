@@ -48,7 +48,7 @@ class ImageTestCases(TestCase):
         self.new_image.save_image()
         self.assertTrue(len(Image.objects.all()) > 0)
 
-     def test_delete_image(self):
+    def test_delete_image(self):
         """
         This will test whether the new image is deleted from the db
         """
@@ -56,4 +56,25 @@ class ImageTestCases(TestCase):
         self.assertTrue(len(Image.objects.all()) > 0)
         self.new_image.delete_image()
         self.assertTrue(len(Image.objects.all()) == 0)
+
+    def test_get_images(self):
+        """
+        This will test whether the get_image will return all the images
+        """
+        self.new_image.save_image()
+        self.assertTrue(len(Image.get_images()) == 1)
+
+    def test_search_image(self):
+        """
+        This will test whether the image is queried based on category
+        """
+        self.new_image.save_image()
+        self.assertTrue(len(Image.search_image("funny")) > 0)
+
+    def test_filter_by_location(self):
+        """
+        This will test whether the filter_by_loc will return photos in a certain category
+        """
+        self.new_image.save_image()
+        self.assertTrue(len(Image.filter_by_location("Africa")) == 1)
 
