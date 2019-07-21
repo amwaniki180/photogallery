@@ -22,4 +22,9 @@ def single_image(request, category_name, image_id):
     title = f'{category_name}'
     return render(request,'single_image.html',{'title':title, 'image':image, 'image_category':image_category, 'locations':locations})
 
+def location_filter(request, location):
+    locations = Location.objects.all()
+    images = Image.filter_by_location(location)
+    title = f'{location} Photos'
+    return render(request, 'location.html', {'title':title, 'images':images, 'locations':locations})
 
