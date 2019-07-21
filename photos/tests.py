@@ -78,3 +78,34 @@ class ImageTestCases(TestCase):
         self.new_image.save_image()
         self.assertTrue(len(Image.filter_by_location("Africa")) == 1)
 
+
+class LocationTestCases(TestCase):
+    """
+    This is the class we will use to test the Locations
+    """
+    def setUp(self):
+        self.new_location = Location(name = "Moringa")
+
+    def tearDown(self):
+        """
+        This will clear the db after each test
+        """
+        Location.objects.all().delete()
+
+    def test_instance(self):
+        """
+        This will test whether the location created is an instance of the Location class
+        """
+        self.assertTrue(isinstance(self.new_location,Location))
+    def test_init(self):
+        """
+        This will test whether the new location is instantiated correctly
+        """
+        self.assertTrue(self.new_location.name == "Moringa")
+
+    def test_save_location(self):
+        """
+        This will test whether the new location is added to the db
+        """
+        self.new_location.save_location()
+        self.assertTrue(len(Location.objects.all()) == 1)
