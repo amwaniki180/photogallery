@@ -101,6 +101,10 @@ class Image(models.Model):
         images_category = Image.objects.filter(category__photo_category__icontains=search_category)
         return images_category
 
+    @classmethod
+    def filter_by_location(cls, filter_location):
+        images_location = Image.objects.filter(location__id=filter_location)
+        return images_location   
 
     
 
