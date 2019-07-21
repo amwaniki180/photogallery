@@ -2,9 +2,13 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render,redirect
-from django.http  import HttpResponse
+from django.http  import HttpResponse,Http404
+from .models import Image, Location, Category
 
 # Create your views here.
-def welcome(request):
-    return render(request, 'index.html')
+def index(request):
+    title = 'Home'
+    images = Image.get_all_images()
+    locations = Location.objects.all()
+    return render(request, 'index.html', {'title':title, 'images':images, 'locations':locations})
 
