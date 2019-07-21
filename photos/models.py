@@ -56,5 +56,14 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
+class Image(models.Model):
+    """
+    This is the class we will use to create images
+    """
+    image_url = models.ImageField(upload_to = "images/")
+    name = models.CharField(max_length = 30)
+    description = models.TextField()
+    location = models.ForeignKey(Location)
+    category = models.ForeignKey(Category)
 
 
