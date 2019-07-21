@@ -84,7 +84,7 @@ class Image(models.Model):
         """
         Image.objects.filter(id = self.id).update(name = val)
     
-     @classmethod
+    @classmethod
     def get_image_by_id(cls,image_id):
         """
         This is the method to get a specific image
@@ -96,7 +96,7 @@ class Image(models.Model):
         all_images = Image.objects.all()
         return all_images
 
-     @classmethod
+    @classmethod
     def search_image(cls,search_category):
         images_category = Image.objects.filter(category__photo_category__icontains=search_category)
         return images_category
