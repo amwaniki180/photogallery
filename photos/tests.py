@@ -109,3 +109,35 @@ class LocationTestCases(TestCase):
         """
         self.new_location.save_location()
         self.assertTrue(len(Location.objects.all()) == 1)
+
+class CategoryTestCases(TestCase):
+    """
+    This is the class we will use to test the Locations
+    """
+    def setUp(self):
+        self.new_category = Category(name = "Moringa")
+
+    def tearDown(self):
+        """
+        This will clear the db after each test
+        """
+        Category.objects.all().delete()
+
+    def test_instance(self):
+        """
+        This will test whether the category created is an instance of the Category class
+        """
+        self.assertTrue(isinstance(self.new_category,Category))
+
+    def test_init(self):
+        """
+        This will test whether the new category is instantiated correctly
+        """
+        self.assertTrue(self.new_category.name == "Moringa")
+
+    def test_save_category(self):
+        """
+        This will test whether the new category is added to the db
+        """
+        self.new_category.save_category()
+        self.assertTrue(len(Category.objects.all()) == 1)
