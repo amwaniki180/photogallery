@@ -66,4 +66,10 @@ class Image(models.Model):
     location = models.ForeignKey(Location)
     category = models.ForeignKey(Category)
 
+    def save_image(self):
+        """
+        This is the function that we will use to save the instance of this class
+        """
+        self.save()
+
 
