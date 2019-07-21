@@ -29,3 +29,6 @@ class Location(models.Model):
         Location.objects.get(id = self.id).update(field = val)
 
     def __str__(self):
+        return self.photo_location
+
+
