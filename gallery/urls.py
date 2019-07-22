@@ -19,5 +19,5 @@ Including another URLconf
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^photos/',include('photos.urls'))
+    url(r'',include('photos.urls'))
 ]
