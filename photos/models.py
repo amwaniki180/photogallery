@@ -8,6 +8,8 @@ class Location(models.Model):
     """
     This is the class where we will create locations
     """
+    photo_location = models.CharField(max_length=50)
+
     name = models.CharField(max_length = 30)
 
     def save_location(self):

@@ -7,7 +7,7 @@
             <div class="image-details">
                 <p class="text-center"><a data-toggle="modal" data-target="#{{img.id}}">{{img.name}}</a></p>
             </div>
-            <img src="{{img.image.cdn_url}}" alt="{{img.name}}">
+            <img src="media/{{ img.image_url }}" alt="{{img.name}}">
         </div>
         {% empty %}
         <div class="container">
