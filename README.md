@@ -60,9 +60,7 @@ Copy functionality does not work
     - Postgresql
 ## Support and contact details
 Contact me on developer on amwaniki180@gmail.com for any comments, reviews or advice.
-### License
-Copyright (c) **Antony Mwaniki**
-Collapse
-
+## License
+MIT License Copyright (c) {2019} ANTONY MWANIKI
 
 
