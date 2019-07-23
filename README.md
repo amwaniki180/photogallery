@@ -1,9 +1,9 @@
-# [PHOTO GALLERY](https://zoooom.herokuapp.com)
+# [PHOTO GALLERY][(https://agile-inlet-62008.herokuapp.com/)]
 ### Simple photo gallery web application to showcase beautiful pictures and designs 
 ### July 22, 2019
-#### By **[Richard Waweru](https://github.com/amwaniki180)**
+#### By **[ANTONY MWANIKI](https://github.com/amwaniki180)**
 ## Description
-[PHOTO GALLERY]((https://zoooom.herokuapp.com)) is a simple photo gallery web application to showcase beautiful pictures and designs. Users get to view photos updated by the site admin. Users can see photos based on the location, by clicking on the listed locations in the menu. They can also copy the link to a photo to paste at their discretion. The search functionality will search photos based on the categories. 
+[PHOTO GALLERY]((https://agile-inlet-62008.herokuapp.com/)) is a simple photo gallery web application to showcase beautiful pictures and designs. Users get to view photos updated by the site admin. Users can see photos based on the location, by clicking on the listed locations in the menu. They can also copy the link to a photo to paste at their discretion. The search functionality will search photos based on the categories. 
 
 ## Set Up and Installations
 ### Prerequisites
@@ -53,8 +53,6 @@ Copy functionality does not work
     - HTML
     - Bootstrap 4
     - Bootstrap 3
-    - django
-    - pillow
     - JavaScript
     - Heroku
     - Postgresql
