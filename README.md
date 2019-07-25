@@ -1,4 +1,4 @@
-# [PHOTO GALLERY][(https://agile-inlet-62008.herokuapp.com/)]
+# [PHOTO GALLERY](https://agile-inlet-62008.herokuapp.com/)
 ### Simple photo gallery web application to showcase beautiful pictures and designs 
 ### July 22, 2019
 #### By **[ANTONY MWANIKI](https://github.com/amwaniki180)**
